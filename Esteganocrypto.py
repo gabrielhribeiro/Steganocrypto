@@ -1,15 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-#Importa funcoes e algumas utilidades da biblioteca tkinter
-from Tkinter import *
+#Importa bibliotecas
 import Tkinter, Tkconstants, tkFileDialog
+import tkSimpleDialog
+import tkMessageBox
+from Tkinter import *
 from tkFileDialog import *
 from PIL import Image
 import aes #criptografia
 import stepic #esteganografia
-import tkSimpleDialog
-import tkMessageBox
 
 #-------------------------------------\funcoes\---------------------------------------------
 def but1(): print('Buttonon was pushed')
