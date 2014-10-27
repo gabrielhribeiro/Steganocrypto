@@ -1,4 +1,4 @@
-Esteganocrypto
+Steganocrypto
 ==============
 
-Esteganography( LSB IMAGES ) using DES cryptography together
+Steganography( LSB IMAGES ) using DES Cryptography together
