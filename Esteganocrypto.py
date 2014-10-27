@@ -41,15 +41,12 @@ def Descripto():
 	txt_descripto = aes.decrypt(s  , key, blocksize )
 
 	
-	#salva_text = tkFileDialog.asksaveasfilename( defaultextension="*.txt")
-	#txt_descripto.save(salva_text)
+	salva_text = tkFileDialog.asksaveasfile(mode='w', defaultextension=".txt")
+	salva_text.write(txt_descripto)
+
 	print 'O texto Descriptografado'
 	print txt_descripto
 	return Descripto
-
-
-
-
 
 #-------------------------\funções Esteganografia\----------------------------
 
