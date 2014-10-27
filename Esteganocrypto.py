@@ -12,12 +12,14 @@ import aes #criptografia
 import stepic #esteganografia
 
 #-------------------------------------\funcoes\---------------------------------------------
+
 def but1(): print('Buttonon was pushed')
 def Save(): tkinter.filedialog.asksaveasfile()		#Define Funcao
 def Quit(): root.destroy()				#Define Funcao
 def Help(): tkinter.messagebox()
 
-#-------------------------\funcao Criptografia\--------------------------------
+#-------------------------\Criptografia\--------------------------------
+
 def Cripto():
 	a_texto = askopenfilename(filetypes=[("Arquivos de Texto","*.txt")])
 	f = open(a_texto)
@@ -31,26 +33,26 @@ def Cripto():
 	print crypted
 
 	return crypted
-
 #---------------------------\descriptografia\---------------------------------
 
 def Descripto():
+	
 	s = Stegana()
 	blocksize = 256
 	key = tkSimpleDialog.askstring('Criptografia AES', 'Digite a chave:')
 	txt_descripto = aes.decrypt(s  , key, blocksize )
-
-	
 	salva_text = tkFileDialog.asksaveasfile(mode='w', defaultextension=".txt")
 	salva_text.write(txt_descripto)
 
 	print 'O texto Descriptografado'
 	print txt_descripto
+
 	return Descripto
 
-#-------------------------\funções Esteganografia\----------------------------
+#-------------------------\Esteganografia\----------------------------
 
 def Stegano():
+
 	img_stegano = askopenfilename(filetypes=[("Arquivo PNG","*.png")])
 	im = Image.open(img_stegano)
 	i = Cripto()
@@ -59,7 +61,7 @@ def Stegano():
 	salva_foto = asksaveasfile(mode='w', defaultextension=".png")
 	im2.save(salva_foto)
 	
-#----------------------------\Steganalise\-----------------------------------       
+#----------------------------\ESteganalise\-----------------------------------       
 
 def Stegana():
 
@@ -93,8 +95,7 @@ Label (root, text="Esteganografia").grid(row=0, padx= 10, pady=10)
 
 #Layout ----------------- inferior Esteganalise------------
  
-
-#---------------\Escolher imagem p cripto\---------------------------
+#---------------\Escolher imagem para Esteganocripto\---------------------------
 
 Label (root, text='Steganocripto:').grid(row = 1, padx=10, pady=10)
 botao_cript = Button(root, text = 'Stegano', height=1, width=14)
@@ -104,7 +105,7 @@ botao_cript.configure(command = Stegano)
 #cabeçalho inferior
 Label (root, text="Esteganalise").grid(row=2, padx= 8, pady=1)
 
-#---------------\Escolha imagem p ddescripto\-----------------------------
+#---------------\Escolha imagem para descripto\-----------------------------
 
 Label (root, text='Descriptostegano:').grid(row = 3, padx=10, pady=10)
 botao_cript = Button(root, text = 'Descripto', height=1, width=14)
@@ -120,7 +121,7 @@ menubar.add_cascade(label='Sobre', menu=filemenu3)	#nomeia menu 3
 menubar.add_cascade(label='Ajuda', menu=filemenu4)	#nomeia menu 4
 
 
-#------------------------------------\Atribuiçoes e configuracoes da janela\-------------------
+#--------------------------------\Atribuiçoes e configuracoes da janela\-------------------
 filemenu.add_command(label='Abrir...', command=Cripto)
 
 filemenu.add_command(label='Salvar como...', command=Cripto)
