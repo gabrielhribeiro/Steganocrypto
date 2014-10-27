@@ -8,3 +8,5 @@ Steganocrypto use a graphical interface to improve the usability. Steganocrypto 
 
 
 Informations
+=
+
