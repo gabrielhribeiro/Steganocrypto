@@ -8,5 +8,13 @@ Steganocrypto use a graphical interface to improve the usability. Steganocrypto 
 
 
 Informations
-=
+-
+Verrsion of python: python 2.7
+
+Install some dependencies before to use:
+
+# sudo apt-get install python-stepic
+
+
+
 
