@@ -8,6 +8,7 @@ Steganocrypto use a graphical interface to improve the usability. Steganocrypto 
 
 
 Informations and how to
+-
 - Verrsion of python: python 2.7
 
 Install some dependencies before to use:
@@ -19,5 +20,6 @@ Install some dependencies before to use:
 
 
 Source libs from:
- Stepic (LSB IMAGES): http://domnit.org/blog/2007/02/stepic-explanation.html  
- AES: http://www.movable-type.co.uk/scripts/aes.html
+-
+Stepic (LSB IMAGES): http://domnit.org/blog/2007/02/stepic-explanation.html  
+AES: http://www.movable-type.co.uk/scripts/aes.html
