@@ -13,7 +13,7 @@ Verrsion of python: python 2.7
 
 Install some dependencies before to use:
 
-# sudo apt-get install python-stepic
+- # sudo apt-get install python-stepic
 
 
 
