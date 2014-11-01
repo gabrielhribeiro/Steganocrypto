@@ -9,13 +9,13 @@ from PIL import Image
 import aes #criptografia
 import stepic #esteganografia
 import tkSimpleDialog
-import tkMessageBox
+import tkMessageBox as box
 
 #-------------------------------------\funcoes\---------------------------------------------
-def but1(): print('Buttonon was pushed')
-def Save(): tkinter.filedialog.asksaveasfile()		#Define Funcao
 def Quit(): root.destroy()				#Define Funcao
-def Help(): tkinter.messagebox()
+
+def About(): tkinter.messagebox()
+
 
 #-------------------------\funcao Criptografia\--------------------------------
 def Cripto():
@@ -77,13 +77,10 @@ def Stegana():
 root = Tk() 						#cria tabela grafica geral
 menubar = Menu(root)					#cria menu na tabela root
 root.config(menu=menubar)				# PESQUISAR
-root.title('Esteganocriptografia')			#configra titulo da janela
+root.title('Steganocrypto')			#configra titulo da janela
 
 
 filemenu = Menu(menubar)				#cria aba de menu
-filemenu2 = Menu(menubar)				#cria aba de menu
-filemenu3 = Menu(menubar)				#cria aba de menu
-filemenu4 = Menu(menubar)
 
 #Layout--------------------------------/Cabeçalho/-----------------------------------------------
 
@@ -114,25 +111,15 @@ botao_cript.configure(command = Descripto)
 
 
 #----------------------------Configuração das opcoes d---------------------------------------#
-menubar.add_cascade(label='Arquivos', menu=filemenu)	#nomeia menu 1
-menubar.add_cascade(label='Opções', menu=filemenu2)	#nomeia menu 2
-menubar.add_cascade(label='Sobre', menu=filemenu3)	#nomeia menu 3
-menubar.add_cascade(label='Ajuda', menu=filemenu4)	#nomeia menu 4
 
+menubar.add_cascade(label='Opções', menu=filemenu)	#nomeia menu 1
 
 #------------------------------------\Atribuiçoes e configuracoes da janela\-------------------
-filemenu.add_command(label='Abrir...', command=Cripto)
 
-filemenu.add_command(label='Salvar como...', command=Cripto)
+filemenu.add_command(label='Sobre', command = Quit)
 
-filemenu2.add_command(label='criptografia')
 
-filemenu.add_separator()
+filemenu.add_command(label='Sair', command = Quit)
 
-filemenu2.add_command(label="esteganografia")
-
-filemenu.add_command(label='Sair', command=Quit)
-
-filemenu3.add_command(label='Sobre')
 
 root.mainloop()   #loop da janela
