@@ -1,6 +1,6 @@
 Steganocrypto
 ==============
-Steganography( LSB IMAGES ) using DES Cryptography together
+Steganography( LSB IMAGES ) using AES Cryptography together
 
 Python program to steganography files into images using the Least Significant Bit technics and Advanced Encryption Standard(AES).
 
