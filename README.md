@@ -13,14 +13,14 @@ Install
 
 `# pip install Steganocrypto `
 
-if has some problem with pil library do
 
-´# pip install PIL´
+( obs. if has some problem with pil library do
+`# pip install PIL`)
 
 
 USE/TEST 
-
-´$ Steganocrypto´
+=
+`$ Steganocrypto`
 
 
 :)
