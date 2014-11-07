@@ -11,4 +11,16 @@ Steganocrypto use a graphical interface to improve the usability. Steganocrypto 
 Install
 =
 
-` pip install Steganocrypto `
+`# pip install Steganocrypto `
+
+if has some problem with pil library do
+
+´# pip install PIL´
+
+
+USE/TEST 
+
+´$ Steganocrypto´
+
+
+:)
